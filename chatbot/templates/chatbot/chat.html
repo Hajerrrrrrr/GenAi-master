@@ -1,0 +1,50 @@
+{% load static %}  <!-- Charge le tag static -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo-img">
+            <div class="logo-text">GenAI Chatbot</div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Profil</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteneur du chatbot -->
+    <div class="chat-container">
+        <div class="message-history" id="messageHistory">
+            <!-- Message d'accueil prédéfini -->
+            <div class="message bot" id="welcomeMessage">
+                <div class="message-content">
+                    👋 Bienvenue sur GenAI Chatbot ! Comment puis-je vous aider aujourd’hui ?
+                </div>
+            </div>
+        </div>
+
+        <!-- Zone de saisie du message -->
+        <div class="message-input">
+            <input type="text" id="messageInput" placeholder="Écrire un message...">
+
+            <!-- Icône de pièce jointe placée avant le bouton d'envoi -->
+            <label for="fileInput" class="attachment-icon">📄</label>
+            <input type="file" id="fileInput" style="display: none">
+
+            <button id="sendBtn">Envoyer</button>
+        </div>
+    </div>
+    
+    <script src="{% static 'js/chatbot.js' %}"></script>
+</body>
+</html>
