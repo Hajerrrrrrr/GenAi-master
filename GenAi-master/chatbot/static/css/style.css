@@ -1,0 +1,113 @@
+/* style.css */
+
+/* Style général de la fenêtre de chat */
+#chat-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;  /* Place les nouveaux messages en bas */
+    height: 100%;  /* Prend toute la hauteur de la page */
+    width: 100%;  /* Prend toute la largeur de la page */
+    max-width: none;  /* Aucun max-width pour que la fenêtre prenne toute la largeur */
+    background-color: #e6f2ff;  /* Fond bleu clair pour la fenêtre de chat */
+    padding: 10px;
+    box-sizing: border-box;  /* S'assure que le padding ne dépasse pas la taille de la fenêtre */
+    margin-top: 60px;  /* Décalage pour la navbar fixée */
+    align-items: center;  /* Centre horizontalement la zone de saisie */
+}
+
+#chat-window {
+    flex-grow: 1;  /* Permet à la fenêtre de discussion de se remplir verticalement */
+    overflow-y: auto;  /* Barre de défilement verticale si nécessaire */
+    margin-bottom: 10px;
+    padding-right: 5px;  /* Éviter que le texte se cache derrière la barre de défilement */
+    width: 100%;  /* La fenêtre de discussion occupe toute la largeur de la zone */
+    max-width: 600px;  /* Limite la largeur maximale */
+    margin: 0 auto;  /* Centre horizontalement */
+}
+
+
+/* Style des messages */
+.message {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+/* Message de l'utilisateur (à droite) */
+.user-message {
+    background-color: #007bff;  /* Fond bleu vif pour les messages utilisateur */
+    color: white;
+    align-self: flex-end;  /* Aligne le message utilisateur à droite */
+    margin-left: auto;     /* Évite que le message utilisateur soit centré */
+}
+
+/* Message du chatbot (à gauche) */
+.bot-message {
+    background-color: #f0f8ff;  /* Fond bleu très clair pour les messages du chatbot */
+    color: black;
+    align-self: flex-start;  /* Aligne le message chatbot à gauche */
+    margin-right: auto;      /* Évite que le message chatbot soit centré */
+}
+
+
+/* Style de l'input */
+#user-input {
+    width: 80%;  /* La largeur de l'input */
+    max-width: 500px;  /* Limite la largeur maximale de l'input */
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #007bff;  /* Bordure bleue pour l'input */
+    background-color: #e6f2ff;  /* Fond bleu clair pour l'input */
+    box-sizing: border-box;
+    align-self: center;  /* Centre l'input horizontalement */
+}
+
+/* Navbar */
+#navbar {
+    background-color: #007bff;  /* Couleur de fond bleue */
+    padding: 10px 0;  /* Espacement en haut et en bas */
+    text-align: center;  /* Centre les éléments */
+    position: fixed;  /* Fixe la navbar en haut de la page */
+    top: 0;  /* Positionne la navbar en haut */
+    width: 100%;  /* Prend toute la largeur */
+    z-index: 1000;  /* S'assure que la navbar soit au-dessus des autres éléments */
+}
+
+/* Liste des liens de la navbar */
+#navbar ul {
+    list-style-type: none;  /* Supprime les puces */
+    margin: 0;
+    padding: 0;
+    display: flex;  /* Utilise le flexbox pour aligner les éléments horizontalement */
+    justify-content: center;  /* Centre les liens */
+}
+
+/* Style des éléments de la navbar */
+#navbar ul li {
+    margin: 0 20px;  /* Espacement entre les éléments */
+}
+
+/* Style des liens de la navbar */
+#navbar ul li a {
+    color: white;  /* Texte blanc */
+    text-decoration: none;  /* Supprime la décoration par défaut des liens */
+    font-size: 18px;  /* Taille du texte */
+    font-weight: bold;  /* Texte en gras */
+    padding: 8px 16px;  /* Espacement autour du texte */
+    transition: background-color 0.3s ease;  /* Transition lors du survol */
+}
+
+/* Effet de survol des liens */
+#navbar ul li a:hover {
+    background-color: #0056b3;  /* Fond bleu plus foncé au survol */
+    border-radius: 5px;  /* Arrondir les coins au survol */
+}
+
+/* Décalage du contenu sous la navbar */
+body {
+    margin-top: 60px;  /* Décalage du contenu pour éviter qu'il soit caché sous la navbar */
+}

@@ -1,0 +1,40 @@
+{% load static %}  <!-- Charge le tag static -->
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+     <!-- Navbar -->
+     <nav id="navbar">
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="chat-box">
+        <!-- Fenêtre de discussion -->
+        <div id="chat-window">
+            <!-- Exemple de message utilisateur -->
+            <div class="message user-message">
+                Bonjour, chatbot !
+            </div>
+            <!-- Exemple de réponse du chatbot -->
+            <div class="message bot-message">
+                Salut, comment puis-je t'aider ?
+            </div>
+        </div>
+        
+        <input type="text" id="user-input" placeholder="Tapez votre message...">
+        
+    </div>
+
+    <script src="{% static 'js/chatbot.js' %}"></script>
+</body>
+</html>
